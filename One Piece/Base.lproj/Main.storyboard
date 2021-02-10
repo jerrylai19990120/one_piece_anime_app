@@ -192,6 +192,55 @@
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="117.85714285714285"/>
         </scene>
+        <!--Character DetailVC-->
+        <scene sceneID="aIb-GS-xVl">
+            <objects>
+                <viewController id="zTu-SP-OKl" customClass="CharacterDetailVC" customModule="One_Piece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZeA-kl-mnm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NV9-6u-ga2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9n-6H-teM">
+                                        <rect key="frame" x="28" y="68.5" width="19.5" height="22"/>
+                                        <color key="tintColor" red="0.26274509800000001" green="0.35686274509999999" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="bod-YI-5pT" eventType="touchUpInside" id="7rk-Bg-76j"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkey D Luffy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6A-9y-793">
+                                        <rect key="frame" x="129.5" y="63" width="155.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.87783648349999999" blue="0.68206160819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="03f-yE-CeS"/>
+                                    <constraint firstItem="E9n-6H-teM" firstAttribute="centerY" secondItem="Y6A-9y-793" secondAttribute="centerY" id="30M-Lc-dIu"/>
+                                    <constraint firstItem="Y6A-9y-793" firstAttribute="top" secondItem="NV9-6u-ga2" secondAttribute="top" constant="63" id="CGN-0F-DHM"/>
+                                    <constraint firstItem="Y6A-9y-793" firstAttribute="centerX" secondItem="NV9-6u-ga2" secondAttribute="centerX" id="Mp9-HU-Xaj"/>
+                                    <constraint firstItem="E9n-6H-teM" firstAttribute="leading" secondItem="NV9-6u-ga2" secondAttribute="leading" constant="28" id="Ogo-Ec-yEW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NV9-6u-ga2" firstAttribute="leading" secondItem="Ltv-TE-aMF" secondAttribute="leading" id="HbN-sI-sMp"/>
+                            <constraint firstItem="NV9-6u-ga2" firstAttribute="trailing" secondItem="Ltv-TE-aMF" secondAttribute="trailing" id="YEC-Xs-Edi"/>
+                            <constraint firstItem="NV9-6u-ga2" firstAttribute="top" secondItem="ZeA-kl-mnm" secondAttribute="top" id="xQb-a6-p1u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ltv-TE-aMF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54y-Ud-mGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712" y="129"/>
+        </scene>
         <!--ChaptersVC-->
         <scene sceneID="7bj-tQ-hbe">
             <objects>
@@ -299,6 +348,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFJ-ah-Qf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="841.74107142857144"/>
+        </scene>
+        <!--Chapter DetailVC-->
+        <scene sceneID="c0L-4K-5UX">
+            <objects>
+                <viewController id="GRp-Gy-KAW" customClass="ChapterDetailVC" customModule="One_Piece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ght-Qe-Ax3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJR-DF-Rbs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yn-s9-W8G">
+                                        <rect key="frame" x="28" y="68.5" width="19.5" height="22"/>
+                                        <color key="tintColor" red="0.26274509800000001" green="0.35686274509999999" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="bod-YI-5pT" eventType="touchUpInside" id="2TS-QW-o8v"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Piece Chapter 985" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-sU-mHO">
+                                        <rect key="frame" x="98.5" y="63" width="217.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.87783648349999999" blue="0.68206160819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2yn-s9-W8G" firstAttribute="leading" secondItem="qJR-DF-Rbs" secondAttribute="leading" constant="28" id="4oJ-Kv-iT4"/>
+                                    <constraint firstItem="ZTf-sU-mHO" firstAttribute="centerX" secondItem="qJR-DF-Rbs" secondAttribute="centerX" id="PGG-8N-cnU"/>
+                                    <constraint firstItem="ZTf-sU-mHO" firstAttribute="top" secondItem="qJR-DF-Rbs" secondAttribute="top" constant="63" id="ecr-Co-WjX"/>
+                                    <constraint firstAttribute="height" constant="125" id="pgm-2T-wgt"/>
+                                    <constraint firstItem="2yn-s9-W8G" firstAttribute="centerY" secondItem="ZTf-sU-mHO" secondAttribute="centerY" id="qjW-8s-MbY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qJR-DF-Rbs" firstAttribute="top" secondItem="ght-Qe-Ax3" secondAttribute="top" id="fOd-ZS-42e"/>
+                            <constraint firstItem="qJR-DF-Rbs" firstAttribute="trailing" secondItem="3sf-XJ-JhZ" secondAttribute="trailing" id="lWy-DD-0aV"/>
+                            <constraint firstItem="qJR-DF-Rbs" firstAttribute="leading" secondItem="3sf-XJ-JhZ" secondAttribute="leading" id="vJA-Wa-Z1S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3sf-XJ-JhZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z53-w6-gJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="848"/>
         </scene>
     </scenes>
     <resources>

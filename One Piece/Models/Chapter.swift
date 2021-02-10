@@ -14,11 +14,18 @@ class Chapter {
     var chapterNumber: String?
     var chapterId: String?
     var chapterImg: String?
+    var chapterSummary: String?
+    var chapterExplanation: String?
+    var chapterCharacters: String?
     
-    init(title: String, chapterNumber: String, chapterId: String) {
+    init(title: String, chapterNumber: String, chapterId: String, summary: String, explanation: String, characters: String, imageURL: String) {
         self.chapterTitle = title
         self.chapterNumber = chapterNumber
         self.chapterId = chapterId
+        self.chapterCharacters = characters
+        self.chapterExplanation = explanation
+        self.chapterSummary = summary
+        self.chapterImg = imageURL
     }
     
 }

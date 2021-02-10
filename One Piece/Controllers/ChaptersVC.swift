@@ -13,14 +13,29 @@ class ChaptersVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var limit = 20
+    var totalEntries = 985
     var chaptersArray = [Chapter]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DataService.instance.removeChapters()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+
+        NotificationCenter.default.addObserver(self, selector: #selector(handleChaptersLoaded(_:)), name: NOTIF_CHAPTERS_LOADED, object: nil)
+
+        DataService.instance.getChapters { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    @objc
+    func handleChaptersLoaded(_ notif: Notification){
+        tableView.reloadData()
     }
     
 
@@ -34,15 +49,15 @@ class ChaptersVC: UIViewController {
 extension ChaptersVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chaptersArray.count
+        return DataService.instance.chapters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "chapterCell") as? ChapterCell else {return UITableViewCell()}
-        cell.configureCell(chapter: chaptersArray[indexPath.row])
+        cell.configureCell(chapter: DataService.instance.chapters[indexPath.row])
         
-        let url = URL(string: chaptersArray[indexPath.row].chapterImg!)
+        let url = URL(string: DataService.instance.chapters[indexPath.row].chapterImg!)
         
         cell.chapterImg.sd_setImage(with: url, placeholderImage: UIImage(named: "anonymousIcon"), completed: nil)
         
@@ -52,6 +67,7 @@ extension ChaptersVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     
     
 }

@@ -20,6 +20,7 @@ class CharactersVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
+        DataService.instance.getCharacters()
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {

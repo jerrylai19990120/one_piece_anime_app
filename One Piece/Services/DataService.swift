@@ -8,16 +8,46 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class DataService {
+    
+    var chapters = [Chapter]()
+    var characters = [Character]()
     
     static let instance = DataService()
     
     func getCharacters(){
-        
+       
     }
     
-    func getChapters(){
+    func getChapters(completion: @escaping (_ status: Bool)->()){
+        
+        for i in 1...985 {
+            AF.request("https://onepiececover.com/api/chapters/\(i)").responseJSON { (response) in
+                
+                guard let json = try? JSON(data: response.data!) else {
+                    completion(false)
+                    return
+                }
+                let title = json["title"].stringValue
+                let chapterNum = json["chapter"].stringValue
+                let summary = json["summary"].stringValue
+                let explanation = json["explanation"].stringValue
+                let characters = json["characters"].stringValue
+                let image = json["cover_images"].stringValue
+                let id = json["id"].stringValue
+                    
+                let chapter = Chapter(title: title, chapterNumber: chapterNum, chapterId: id, summary: summary, explanation: explanation, characters: characters, imageURL: image)
+                
+                self.chapters.append(chapter)
+                
+                if self.chapters.count == 985 {
+                    completion(true)
+                }
+            }
+        }
+        
         
     }
     
@@ -27,6 +57,14 @@ class DataService {
     
     func getCharacterDetails(){
         
+    }
+    
+    func removeChapters(){
+        chapters.removeAll()
+    }
+    
+    func removeCharacters(){
+        characters.removeAll()
     }
     
 }
