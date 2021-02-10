@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import Alamofire
+
+class DataService {
+    
+    static let instance = DataService()
+    
+    func getCharacters(){
+        
+    }
+    
+    func getChapters(){
+        
+    }
+    
+    func getChapterDetails(){
+        
+    }
+    
+    func getCharacterDetails(){
+        
+    }
+    
+}

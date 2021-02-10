@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CharactersVC: UIViewController {
 
@@ -21,7 +22,10 @@ class CharactersVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 
 }
@@ -34,9 +38,17 @@ extension CharactersVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = charactersArray[indexPath.row] as? CharacterCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell") as? CharacterCell else {return UITableViewCell()}
         
-        return UITableViewCell()
+        let character = charactersArray[indexPath.row]
+        
+        cell.configureCell(character: character)
+        
+        let url = URL(string: character.profileImg!)
+        
+        cell.characterImg.sd_setImage(with: url, placeholderImage: UIImage(named: "anonymousIcon"), completed: nil)
+        
+        return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

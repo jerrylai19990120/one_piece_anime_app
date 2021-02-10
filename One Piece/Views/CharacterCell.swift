@@ -22,8 +22,13 @@ class CharacterCell: UITableViewCell {
         // Initialization code
     }
 
-    func initData(){
+    func configureCell(character: Character){
+        
+        characterName.text = character.name
+        bountyLabel.text = character.bounty
+        birthPlaceLabel.text = character.birthPlace
         
     }
+    
 
 }

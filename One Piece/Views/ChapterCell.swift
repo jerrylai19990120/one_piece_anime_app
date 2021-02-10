@@ -9,16 +9,20 @@
 import UIKit
 
 class ChapterCell: UITableViewCell {
-
+    
+    
+    @IBOutlet weak var chapterImg: UIImageView!
+    @IBOutlet weak var chapterNumber: UILabel!
+    @IBOutlet weak var chapterTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell(chapter: Chapter){
+        chapterNumber.text = chapter.chapterNumber
+        chapterTitle.text = chapter.chapterTitle
     }
 
 }

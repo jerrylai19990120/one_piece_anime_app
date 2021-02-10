@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		922EE28725D4389400C71870 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922EE28625D4389400C71870 /* Chapter.swift */; };
 		926A832F25D35CF500651424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A832E25D35CF500651424 /* AppDelegate.swift */; };
 		926A833125D35CF500651424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A833025D35CF500651424 /* SceneDelegate.swift */; };
 		926A833325D35CF500651424 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A833225D35CF500651424 /* HomeVC.swift */; };
@@ -20,9 +21,12 @@
 		926A834D25D3878E00651424 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A834C25D3878E00651424 /* ChapterCell.swift */; };
 		926A835025D38B8500651424 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A834F25D38B8500651424 /* Character.swift */; };
 		926A835325D38D2500651424 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A835225D38D2500651424 /* DataService.swift */; };
+		DE6F78BCBE0AD2C9F2206AF2 /* Pods_One_Piece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04C18B3E33DFE918A8C603D /* Pods_One_Piece.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FD20D2B4B680FAFDE52F260 /* Pods-One Piece.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-One Piece.release.xcconfig"; path = "Target Support Files/Pods-One Piece/Pods-One Piece.release.xcconfig"; sourceTree = "<group>"; };
+		922EE28625D4389400C71870 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		926A832B25D35CF500651424 /* One Piece.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "One Piece.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		926A832E25D35CF500651424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		926A833025D35CF500651424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		926A834C25D3878E00651424 /* ChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
 		926A834F25D38B8500651424 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		926A835225D38D2500651424 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D04C18B3E33DFE918A8C603D /* Pods_One_Piece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_One_Piece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81E227DBF2E80B4139A4B4F /* Pods-One Piece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-One Piece.debug.xcconfig"; path = "Target Support Files/Pods-One Piece/Pods-One Piece.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6F78BCBE0AD2C9F2206AF2 /* Pods_One_Piece.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4721566436C18CB40C3AF8FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D04C18B3E33DFE918A8C603D /* Pods_One_Piece.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D4C26A76F5B1FDC4C517858 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F81E227DBF2E80B4139A4B4F /* Pods-One Piece.debug.xcconfig */,
+				4FD20D2B4B680FAFDE52F260 /* Pods-One Piece.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		926A832225D35CF500651424 = {
 			isa = PBXGroup;
 			children = (
 				926A832D25D35CF500651424 /* One Piece */,
 				926A832C25D35CF500651424 /* Products */,
+				4D4C26A76F5B1FDC4C517858 /* Pods */,
+				4721566436C18CB40C3AF8FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				926A834F25D38B8500651424 /* Character.swift */,
+				922EE28625D4389400C71870 /* Chapter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 926A833F25D35CF600651424 /* Build configuration list for PBXNativeTarget "One Piece" */;
 			buildPhases = (
+				CF1922502755E7A20A7954BA /* [CP] Check Pods Manifest.lock */,
 				926A832725D35CF500651424 /* Sources */,
 				926A832825D35CF500651424 /* Frameworks */,
 				926A832925D35CF500651424 /* Resources */,
+				2F878BA59D1E4AF82DBF7A13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +215,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F878BA59D1E4AF82DBF7A13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-One Piece/Pods-One Piece-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-One Piece/Pods-One Piece-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-One Piece/Pods-One Piece-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF1922502755E7A20A7954BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-One Piece-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		926A832725D35CF500651424 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -201,6 +272,7 @@
 				926A832F25D35CF500651424 /* AppDelegate.swift in Sources */,
 				926A833125D35CF500651424 /* SceneDelegate.swift in Sources */,
 				926A835325D38D2500651424 /* DataService.swift in Sources */,
+				922EE28725D4389400C71870 /* Chapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +414,7 @@
 		};
 		926A834025D35CF600651424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F81E227DBF2E80B4139A4B4F /* Pods-One Piece.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,6 +433,7 @@
 		};
 		926A834125D35CF600651424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FD20D2B4B680FAFDE52F260 /* Pods-One Piece.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
