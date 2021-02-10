@@ -14,12 +14,13 @@ class Character {
     var name: String?
     var birthPlace: String?
     var bounty: String?
-    var profileImg: UIImageView?
+    var profileImg: String?
     
     init(imageUrl: String, name: String, birthPlace: String, bounty: String) {
         self.name = name
         self.birthPlace = birthPlace
         self.bounty = bounty
-        
+        self.profileImg = imageUrl
     }
+    
 }
