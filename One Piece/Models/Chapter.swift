@@ -8,17 +8,17 @@
 
 import Foundation
 
-class Chapter {
+class Chapter: NSCoder {
     
     var chapterTitle: String?
     var chapterNumber: String?
-    var chapterId: String?
+    var chapterId: Int?
     var chapterImg: String?
     var chapterSummary: String?
     var chapterExplanation: String?
     var chapterCharacters: String?
     
-    init(title: String, chapterNumber: String, chapterId: String, summary: String, explanation: String, characters: String, imageURL: String) {
+    init(title: String, chapterNumber: String, chapterId: Int, summary: String, explanation: String, characters: String, imageURL: String) {
         self.chapterTitle = title
         self.chapterNumber = chapterNumber
         self.chapterId = chapterId
@@ -26,6 +26,18 @@ class Chapter {
         self.chapterExplanation = explanation
         self.chapterSummary = summary
         self.chapterImg = imageURL
+    }
+    
+    func encodeWithCoder(coder: NSCoder) {
+        
+        if let chapterTitle = chapterTitle { coder.encode(chapterTitle, forKey: "chapterTitle") }
+        
+        if let chapterNumber = chapterNumber { coder.encode(chapterNumber, forKey: "chapterNumber") }
+        if let chapterId = chapterId { coder.encode(chapterId, forKey: "chapterId") }
+        if let chapterImg = chapterImg { coder.encode(chapterImg, forKey: "chapterImg") }
+        if let chapterSummary = chapterSummary { coder.encode(chapterSummary, forKey: "chapterSummary") }
+        if let chapterExplanation = chapterExplanation { coder.encode(chapterExplanation, forKey: "chapterExplanation") }
+        if let chapterCharacters = chapterCharacters { coder.encode(chapterCharacters, forKey: "chapterCharacters") }
     }
     
 }

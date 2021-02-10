@@ -13,6 +13,7 @@ import SwiftyJSON
 class DataService {
     
     var chapters = [Chapter]()
+    
     var characters = [Character]()
     
     static let instance = DataService()
@@ -36,13 +37,16 @@ class DataService {
                 let explanation = json["explanation"].stringValue
                 let characters = json["characters"].stringValue
                 let image = json["cover_images"].stringValue
-                let id = json["id"].stringValue
+                let id = Int(json["id"].stringValue)
                     
-                let chapter = Chapter(title: title, chapterNumber: chapterNum, chapterId: id, summary: summary, explanation: explanation, characters: characters, imageURL: image)
+                let chapter = Chapter(title: title, chapterNumber: chapterNum, chapterId: id!, summary: summary, explanation: explanation, characters: characters, imageURL: image)
                 
                 self.chapters.append(chapter)
                 
-                if self.chapters.count == 985 {
+                if self.chapters.count == 983 {
+                    self.chapters.sort {
+                        $0.chapterId! < $1.chapterId!
+                    }
                     completion(true)
                 }
             }

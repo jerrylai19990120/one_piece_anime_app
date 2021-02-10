@@ -17,21 +17,46 @@ class ChaptersVC: UIViewController {
     var totalEntries = 985
     var chaptersArray = [Chapter]()
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DataService.instance.removeChapters()
+        spinner.style = .large
+        spinner.isHidden = false
+        spinner.startAnimating()
+        
         tableView.delegate = self
         tableView.dataSource = self
 
         NotificationCenter.default.addObserver(self, selector: #selector(handleChaptersLoaded(_:)), name: NOTIF_CHAPTERS_LOADED, object: nil)
-
-        DataService.instance.getChapters { (success) in
-            if success {
-                self.tableView.reloadData()
+        
+        if DataService.instance.chapters.count == 0 {
+            DataService.instance.getChapters { (success) in
+                if success {
+                    self.spinner.stopAnimating()
+                    self.spinner.isHidden = true
+                    NotificationCenter.default.post(name: NOTIF_CHAPTERS_LOADED, object: nil)
+                    
+                }
             }
+        } else if DataService.instance.chapters.count < 983 {
+            DataService.instance.removeChapters()
+            DataService.instance.getChapters { (success) in
+                if success {
+                    self.spinner.stopAnimating()
+                    self.spinner.isHidden = true
+                    NotificationCenter.default.post(name: NOTIF_CHAPTERS_LOADED, object: nil)
+                }
+            }
+        } else if DataService.instance.chapters.count == 983 {
+            spinner.stopAnimating()
+            spinner.isHidden = true
         }
+
     }
+    
+    
     
     @objc
     func handleChaptersLoaded(_ notif: Notification){

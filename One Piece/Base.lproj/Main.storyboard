@@ -328,20 +328,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="icT-hk-TaO">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="icT-hk-TaO" firstAttribute="centerY" secondItem="3O5-6e-jwQ" secondAttribute="centerY" id="3yd-b0-1Jt"/>
                             <constraint firstItem="AwS-3n-t8m" firstAttribute="leading" secondItem="rco-Yj-YNK" secondAttribute="leading" id="72P-bi-2HJ"/>
                             <constraint firstItem="oJr-dc-134" firstAttribute="trailing" secondItem="rco-Yj-YNK" secondAttribute="trailing" id="Cz8-kW-UpH"/>
                             <constraint firstItem="AwS-3n-t8m" firstAttribute="top" secondItem="oJr-dc-134" secondAttribute="bottom" id="LpC-HE-hwE"/>
                             <constraint firstItem="AwS-3n-t8m" firstAttribute="trailing" secondItem="rco-Yj-YNK" secondAttribute="trailing" id="P8n-HH-K7c"/>
                             <constraint firstItem="oJr-dc-134" firstAttribute="top" secondItem="3O5-6e-jwQ" secondAttribute="top" id="RmZ-Kd-s4o"/>
+                            <constraint firstItem="icT-hk-TaO" firstAttribute="centerX" secondItem="3O5-6e-jwQ" secondAttribute="centerX" id="b4l-zi-7Hd"/>
                             <constraint firstAttribute="bottom" secondItem="AwS-3n-t8m" secondAttribute="bottom" id="vJP-2p-gvF"/>
                             <constraint firstItem="oJr-dc-134" firstAttribute="leading" secondItem="rco-Yj-YNK" secondAttribute="leading" id="xXs-qN-q7b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rco-Yj-YNK"/>
                     </view>
                     <connections>
+                        <outlet property="spinner" destination="icT-hk-TaO" id="wuA-xd-XFb"/>
                         <outlet property="tableView" destination="AwS-3n-t8m" id="DC6-Mw-bkh"/>
                     </connections>
                 </viewController>
