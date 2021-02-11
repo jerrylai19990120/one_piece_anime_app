@@ -93,6 +93,12 @@ extension ChaptersVC: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let chapterDetailVC = storyboard?.instantiateViewController(identifier: "chapterDetailVC") as? ChapterDetailVC else {return}
+        chapterDetailVC.modalPresentationStyle = .fullScreen
+        present(chapterDetailVC, animated: true, completion: nil)
+        
+    }
     
     
 }

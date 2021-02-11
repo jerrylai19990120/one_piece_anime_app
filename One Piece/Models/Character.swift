@@ -13,19 +13,23 @@ import UIKit
 class Character {
     
     var name: String?
-    var birthPlace: String?
+    var height: String?
     var bounty: String?
     var profileImg: String?
     
-    init(imageUrl: String, name: String, birthPlace: String, bounty: String) {
+    init(imageUrl: String, name: String, height: String, bounty: String) {
         self.name = name
-        self.birthPlace = birthPlace
+        self.height = height
         self.bounty = bounty
         self.profileImg = imageUrl
     }
     
     func setBounty(bounty: String){
         self.bounty = bounty
+    }
+    
+    func setHeight(height: String){
+        self.height = height
     }
     
 }

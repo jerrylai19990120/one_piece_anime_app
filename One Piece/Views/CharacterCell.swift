@@ -26,7 +26,7 @@ class CharacterCell: UITableViewCell {
         
         characterName.text = character.name
         bountyLabel.text = character.bounty
-        birthPlaceLabel.text = character.birthPlace
+        birthPlaceLabel.text = character.height
         
     }
     

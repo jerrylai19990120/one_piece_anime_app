@@ -139,8 +139,8 @@
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="East Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAX-5p-wPY">
-                                                            <rect key="frame" x="0.0" y="22" width="70" height="19"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.74 meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAX-5p-wPY">
+                                                            <rect key="frame" x="0.0" y="22" width="85" height="19"/>
                                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                             <color key="textColor" red="0.26274509800000001" green="0.35686274509999999" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -209,6 +209,7 @@
                                         <state key="normal" image="arrow.left" catalog="system"/>
                                         <connections>
                                             <action selector="backBtnPressed:" destination="bod-YI-5pT" eventType="touchUpInside" id="7rk-Bg-76j"/>
+                                            <action selector="backBtnPressed:" destination="zTu-SP-OKl" eventType="touchUpInside" id="zoz-wJ-vmO"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkey D Luffy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6A-9y-793">
@@ -359,9 +360,9 @@
         <!--Chapter DetailVC-->
         <scene sceneID="c0L-4K-5UX">
             <objects>
-                <viewController id="GRp-Gy-KAW" customClass="ChapterDetailVC" customModule="One_Piece" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chapterDetailVC" id="GRp-Gy-KAW" customClass="ChapterDetailVC" customModule="One_Piece" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ght-Qe-Ax3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJR-DF-Rbs">
@@ -373,6 +374,7 @@
                                         <state key="normal" image="arrow.left" catalog="system"/>
                                         <connections>
                                             <action selector="backBtnPressed:" destination="bod-YI-5pT" eventType="touchUpInside" id="2TS-QW-o8v"/>
+                                            <action selector="backBtnPressed:" destination="GRp-Gy-KAW" eventType="touchUpInside" id="OET-bl-YlR"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Piece Chapter 985" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-sU-mHO">
@@ -391,19 +393,136 @@
                                     <constraint firstItem="2yn-s9-W8G" firstAttribute="centerY" secondItem="ZTf-sU-mHO" secondAttribute="centerY" id="qjW-8s-MbY"/>
                                 </constraints>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtb-Kg-541">
+                                <rect key="frame" x="0.0" y="125" width="414" height="1175"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRb-x7-j19">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-cf-nwb">
+                                                <rect key="frame" x="33" y="691" width="3723" height="82.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qc-Oy-Vu5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H53-KY-7Cu" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="38" width="3723" height="44.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ipM-eT-Mof">
+                                                <rect key="frame" x="33" y="947" width="3723" height="90.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPLANATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOo-GN-SCg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="133" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdB-A4-HK0" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="46" width="3723" height="44.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cJ6-hg-LlI">
+                                                <rect key="frame" x="12.5" y="50" width="389" height="305.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Piece Chapter 1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDb-eG-2mJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="389" height="36.5"/>
+                                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The defeat of two yonkos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCZ-qI-vYj">
+                                                        <rect key="frame" x="0.0" y="52.5" width="389" height="37"/>
+                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="23"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anonymousIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JBr-qK-FYa">
+                                                        <rect key="frame" x="0.0" y="105.5" width="389" height="200"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="055-QY-0gi"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="JBr-qK-FYa" firstAttribute="leading" secondItem="cJ6-hg-LlI" secondAttribute="leading" id="F1q-IO-cza"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nDb-eG-2mJ" secondAttribute="trailing" id="Wfq-h3-9Tg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JBr-qK-FYa" secondAttribute="trailing" id="Y0A-Rc-nSO"/>
+                                                    <constraint firstItem="jCZ-qI-vYj" firstAttribute="leading" secondItem="cJ6-hg-LlI" secondAttribute="leading" id="h90-90-MDn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jCZ-qI-vYj" secondAttribute="trailing" id="qjb-zE-NY1"/>
+                                                    <constraint firstItem="nDb-eG-2mJ" firstAttribute="leading" secondItem="cJ6-hg-LlI" secondAttribute="leading" id="wwE-m1-hwT"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DFP-S6-lkZ">
+                                                <rect key="frame" x="12" y="406" width="3455.5" height="74.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARACTERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBs-So-5t0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-d0-D9j" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="30" width="3455.5" height="44.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.3238237917984208" green="0.82271794729887304" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="cJ6-hg-LlI" firstAttribute="top" secondItem="RRb-x7-j19" secondAttribute="top" constant="50" id="FF1-Og-c9z"/>
+                                            <constraint firstAttribute="height" constant="1200" id="rui-cb-2hy"/>
+                                            <constraint firstItem="cJ6-hg-LlI" firstAttribute="centerX" secondItem="RRb-x7-j19" secondAttribute="centerX" id="ztd-TA-eAv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RRb-x7-j19" firstAttribute="trailing" secondItem="rtb-Kg-541" secondAttribute="trailing" id="24x-VS-qP9"/>
+                                    <constraint firstItem="RRb-x7-j19" firstAttribute="leading" secondItem="rtb-Kg-541" secondAttribute="leading" id="Grs-pR-TSl"/>
+                                    <constraint firstAttribute="bottom" secondItem="RRb-x7-j19" secondAttribute="bottom" id="M0H-tH-wXW"/>
+                                    <constraint firstItem="RRb-x7-j19" firstAttribute="top" secondItem="rtb-Kg-541" secondAttribute="top" id="uco-go-bwN"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.32382379179999998" green="0.82271794730000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="rtb-Kg-541" firstAttribute="top" secondItem="qJR-DF-Rbs" secondAttribute="bottom" id="RzC-Cw-I6d"/>
+                            <constraint firstItem="rtb-Kg-541" firstAttribute="trailing" secondItem="3sf-XJ-JhZ" secondAttribute="trailing" id="XDo-LT-A8Z"/>
                             <constraint firstItem="qJR-DF-Rbs" firstAttribute="top" secondItem="ght-Qe-Ax3" secondAttribute="top" id="fOd-ZS-42e"/>
+                            <constraint firstAttribute="bottom" secondItem="rtb-Kg-541" secondAttribute="bottom" id="j9k-ge-fBw"/>
+                            <constraint firstItem="RRb-x7-j19" firstAttribute="width" secondItem="ght-Qe-Ax3" secondAttribute="width" id="jpT-9I-HC2"/>
                             <constraint firstItem="qJR-DF-Rbs" firstAttribute="trailing" secondItem="3sf-XJ-JhZ" secondAttribute="trailing" id="lWy-DD-0aV"/>
+                            <constraint firstItem="rtb-Kg-541" firstAttribute="leading" secondItem="3sf-XJ-JhZ" secondAttribute="leading" id="ooV-cL-kvQ"/>
                             <constraint firstItem="qJR-DF-Rbs" firstAttribute="leading" secondItem="3sf-XJ-JhZ" secondAttribute="leading" id="vJA-Wa-Z1S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3sf-XJ-JhZ"/>
                     </view>
+                    <size key="freeformSize" width="414" height="1300"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z53-w6-gJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="848"/>
+            <point key="canvasLocation" x="908.69565217391312" y="976.33928571428567"/>
         </scene>
     </scenes>
     <resources>

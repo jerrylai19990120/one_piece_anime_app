@@ -26,6 +26,8 @@
 		926A835325D38D2500651424 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A835225D38D2500651424 /* DataService.swift */; };
 		929CCDE125D5900C00F78D08 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 929CCDE025D5900C00F78D08 /* characters.json */; };
 		929CCDE525D5A06E00F78D08 /* bounties.json in Resources */ = {isa = PBXBuildFile; fileRef = 929CCDE425D5A06E00F78D08 /* bounties.json */; };
+		929CCDE725D5D3C300F78D08 /* heights.json in Resources */ = {isa = PBXBuildFile; fileRef = 929CCDE625D5D3C300F78D08 /* heights.json */; };
+		929CCDE925D5E82800F78D08 /* DynamicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929CCDE825D5E82800F78D08 /* DynamicTextView.swift */; };
 		DE6F78BCBE0AD2C9F2206AF2 /* Pods_One_Piece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04C18B3E33DFE918A8C603D /* Pods_One_Piece.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		926A835225D38D2500651424 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		929CCDE025D5900C00F78D08 /* characters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
 		929CCDE425D5A06E00F78D08 /* bounties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bounties.json; sourceTree = "<group>"; };
+		929CCDE625D5D3C300F78D08 /* heights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heights.json; sourceTree = "<group>"; };
+		929CCDE825D5E82800F78D08 /* DynamicTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTextView.swift; sourceTree = "<group>"; };
 		D04C18B3E33DFE918A8C603D /* Pods_One_Piece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_One_Piece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81E227DBF2E80B4139A4B4F /* Pods-One Piece.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-One Piece.debug.xcconfig"; path = "Target Support Files/Pods-One Piece/Pods-One Piece.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 				926A834425D35F1500651424 /* MenuButton.swift */,
 				926A834A25D3877D00651424 /* CharacterCell.swift */,
 				926A834C25D3878E00651424 /* ChapterCell.swift */,
+				929CCDE825D5E82800F78D08 /* DynamicTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 		929CCDDF25D58FA200F78D08 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				929CCDE625D5D3C300F78D08 /* heights.json */,
 				929CCDE425D5A06E00F78D08 /* bounties.json */,
 				929CCDE025D5900C00F78D08 /* characters.json */,
 			);
@@ -242,6 +248,7 @@
 				926A833B25D35CF600651424 /* LaunchScreen.storyboard in Resources */,
 				926A833825D35CF600651424 /* Assets.xcassets in Resources */,
 				926A833625D35CF500651424 /* Main.storyboard in Resources */,
+				929CCDE725D5D3C300F78D08 /* heights.json in Resources */,
 				929CCDE125D5900C00F78D08 /* characters.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +304,7 @@
 			files = (
 				926A835025D38B8500651424 /* Character.swift in Sources */,
 				926A834925D363AA00651424 /* CharactersVC.swift in Sources */,
+				929CCDE925D5E82800F78D08 /* DynamicTextView.swift in Sources */,
 				926A834725D3639600651424 /* ChaptersVC.swift in Sources */,
 				926A834525D35F1500651424 /* MenuButton.swift in Sources */,
 				926A834D25D3878E00651424 /* ChapterCell.swift in Sources */,
@@ -454,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.3;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = "One Piece/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,7 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.3;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = "One Piece/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

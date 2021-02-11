@@ -31,7 +31,7 @@ class DataService {
                 let name = character["name"].stringValue
                 let image = character["imageURL"].stringValue
                 
-                let item = Character(imageUrl: image, name: name, birthPlace: "unknown", bounty: "unknown")
+                let item = Character(imageUrl: image, name: name, height: "unknown", bounty: "unknown")
                 
                 self.characters.append(item)
             }
@@ -46,11 +46,29 @@ class DataService {
                 let amount = bounty["bounty"].stringValue
                 
                 for ch in self.characters {
-                    if let range = ch.name!.range(of: name, options: .caseInsensitive) {
+                    if let range = ch.name!.range(of: name, options: .caseInsensitive){
                         ch.setBounty(bounty: "฿\(amount)")
+                        break
                     }
                 }
                 
+            }
+            
+            let pathHeight = Bundle.main.path(forResource: "heights", ofType: "json")
+            let urlHeight = URL(fileURLWithPath: pathHeight!)
+            let jsonDataHeight = try? Data(contentsOf: urlHeight, options: .mappedIfSafe)
+            let jsonHeights = try? JSON(data: jsonDataHeight!).array
+            
+            for height in jsonHeights! {
+                let name = height["name"].stringValue
+                let heightInMeters = height["height"].stringValue
+                
+                for ch in self.characters {
+                    if let range = ch.name?.range(of: name, options: .caseInsensitive){
+                        ch.setHeight(height: "\(heightInMeters) meters")
+                        break
+                    }
+                }
             }
             
             completion(true)
@@ -62,7 +80,7 @@ class DataService {
     
     func getChapters(completion: @escaping (_ status: Bool)->()){
         
-        for i in 1...985 {
+        for i in 1...10 {
             AF.request("https://onepiececover.com/api/chapters/\(i)").responseJSON { (response) in
                 
                 guard let json = try? JSON(data: response.data!) else {
@@ -81,7 +99,7 @@ class DataService {
                 
                 self.chapters.append(chapter)
                 
-                if self.chapters.count == 983 {
+                if self.chapters.count == 10 {
                     self.chapters.sort {
                         $0.chapterId! < $1.chapterId!
                     }
