@@ -18,8 +18,29 @@ class DataService {
     
     static let instance = DataService()
     
-    func getCharacters(){
+    func getCharacters(completion: @escaping (_ status:Bool)->()){
        
+        do {
+            let path = Bundle.main.path(forResource: "characters", ofType: "json")
+            let url = URL(fileURLWithPath: path!)
+            let jsonData = try? Data(contentsOf: url, options: .mappedIfSafe)
+            let json = try? JSON(data: jsonData!).array
+            
+            for character in json! {
+                
+                let name = character["name"].stringValue
+                let image = character["imageURL"].stringValue
+                
+                let item = Character(imageUrl: image, name: name, birthPlace: "unknown", bounty: "unknown")
+                
+                self.characters.append(item)
+            }
+            
+            completion(true)
+        } catch {
+            completion(false)
+            debugPrint(error.localizedDescription)
+        }
     }
     
     func getChapters(completion: @escaping (_ status: Bool)->()){

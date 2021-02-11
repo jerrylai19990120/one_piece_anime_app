@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Chapter: NSCoder {
+class Chapter: Codable {
     
     var chapterTitle: String?
     var chapterNumber: String?
@@ -28,16 +28,5 @@ class Chapter: NSCoder {
         self.chapterImg = imageURL
     }
     
-    func encodeWithCoder(coder: NSCoder) {
-        
-        if let chapterTitle = chapterTitle { coder.encode(chapterTitle, forKey: "chapterTitle") }
-        
-        if let chapterNumber = chapterNumber { coder.encode(chapterNumber, forKey: "chapterNumber") }
-        if let chapterId = chapterId { coder.encode(chapterId, forKey: "chapterId") }
-        if let chapterImg = chapterImg { coder.encode(chapterImg, forKey: "chapterImg") }
-        if let chapterSummary = chapterSummary { coder.encode(chapterSummary, forKey: "chapterSummary") }
-        if let chapterExplanation = chapterExplanation { coder.encode(chapterExplanation, forKey: "chapterExplanation") }
-        if let chapterCharacters = chapterCharacters { coder.encode(chapterCharacters, forKey: "chapterCharacters") }
-    }
     
 }

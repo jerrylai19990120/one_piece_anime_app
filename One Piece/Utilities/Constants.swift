@@ -10,3 +10,4 @@ import Foundation
 import UIKit
 
 let NOTIF_CHAPTERS_LOADED = Notification.Name("chaptersLoaded")
+

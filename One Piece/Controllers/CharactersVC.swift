@@ -20,7 +20,11 @@ class CharactersVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
-        DataService.instance.getCharacters()
+        DataService.instance.getCharacters { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
@@ -34,14 +38,14 @@ class CharactersVC: UIViewController {
 extension CharactersVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return charactersArray.count
+        return DataService.instance.characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell") as? CharacterCell else {return UITableViewCell()}
         
-        let character = charactersArray[indexPath.row]
+        let character = DataService.instance.characters[indexPath.row]
         
         cell.configureCell(character: character)
         
