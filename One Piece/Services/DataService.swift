@@ -18,6 +18,8 @@ class DataService {
     
     static let instance = DataService()
     
+    var selectedChapter: Int?
+    
     func getCharacters(completion: @escaping (_ status:Bool)->()){
        
         do {
@@ -111,9 +113,6 @@ class DataService {
         
     }
     
-    func getChapterDetails(){
-        
-    }
     
     func getCharacterDetails(){
         
@@ -125,6 +124,10 @@ class DataService {
     
     func removeCharacters(){
         characters.removeAll()
+    }
+    
+    func selectChapter(number: Int){
+        self.selectedChapter = number
     }
     
 }

@@ -399,27 +399,26 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRb-x7-j19">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-cf-nwb">
-                                                <rect key="frame" x="33" y="691" width="3723" height="82.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DFP-S6-lkZ">
+                                                <rect key="frame" x="12" y="403.5" width="390" height="74.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qc-Oy-Vu5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARACTERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBs-So-5t0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="20"/>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H53-KY-7Cu" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="38" width="3723" height="44.5"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Luffy, zoro, kid, law, big mom, kaido, oden, yamato" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-d0-D9j" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="30" width="358.5" height="44.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ipM-eT-Mof">
-                                                <rect key="frame" x="33" y="947" width="3723" height="90.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ipM-eT-Mof">
+                                                <rect key="frame" x="12" y="939" width="390" height="373"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPLANATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOo-GN-SCg">
                                                         <rect key="frame" x="0.0" y="0.0" width="133" height="20"/>
@@ -428,7 +427,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdB-A4-HK0" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="46" width="3723" height="44.5"/>
+                                                        <rect key="frame" x="0.0" y="46" width="390" height="327"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -469,19 +468,19 @@
                                                     <constraint firstItem="nDb-eG-2mJ" firstAttribute="leading" secondItem="cJ6-hg-LlI" secondAttribute="leading" id="wwE-m1-hwT"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DFP-S6-lkZ">
-                                                <rect key="frame" x="12" y="406" width="3455.5" height="74.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-cf-nwb">
+                                                <rect key="frame" x="12" y="526" width="390" height="365"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARACTERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBs-So-5t0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qc-Oy-Vu5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="20"/>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-d0-D9j" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="30" width="3455.5" height="44.5"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H53-KY-7Cu" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="38" width="390" height="327"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -491,14 +490,23 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.3238237917984208" green="0.82271794729887304" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="ipM-eT-Mof" firstAttribute="top" secondItem="eRS-cf-nwb" secondAttribute="bottom" constant="48" id="5Qz-qq-C9j"/>
+                                            <constraint firstAttribute="trailing" secondItem="DFP-S6-lkZ" secondAttribute="trailing" constant="12" id="9Wy-zC-aBe"/>
+                                            <constraint firstAttribute="trailing" secondItem="ipM-eT-Mof" secondAttribute="trailing" constant="12" id="Emm-21-EWv"/>
                                             <constraint firstItem="cJ6-hg-LlI" firstAttribute="top" secondItem="RRb-x7-j19" secondAttribute="top" constant="50" id="FF1-Og-c9z"/>
-                                            <constraint firstAttribute="height" constant="1200" id="rui-cb-2hy"/>
+                                            <constraint firstItem="ipM-eT-Mof" firstAttribute="leading" secondItem="RRb-x7-j19" secondAttribute="leading" constant="12" id="NKf-Ak-pqq"/>
+                                            <constraint firstItem="eRS-cf-nwb" firstAttribute="top" secondItem="DFP-S6-lkZ" secondAttribute="bottom" constant="48" id="ODL-Uo-Osr"/>
+                                            <constraint firstItem="DFP-S6-lkZ" firstAttribute="leading" secondItem="RRb-x7-j19" secondAttribute="leading" constant="12" id="UJt-2f-gvL"/>
+                                            <constraint firstAttribute="trailing" secondItem="eRS-cf-nwb" secondAttribute="trailing" constant="12" id="aA4-bp-RrE"/>
+                                            <constraint firstItem="DFP-S6-lkZ" firstAttribute="top" secondItem="cJ6-hg-LlI" secondAttribute="bottom" constant="48" id="ss4-fE-L9u"/>
+                                            <constraint firstItem="eRS-cf-nwb" firstAttribute="leading" secondItem="RRb-x7-j19" secondAttribute="leading" constant="12" id="yUl-86-oye"/>
                                             <constraint firstItem="cJ6-hg-LlI" firstAttribute="centerX" secondItem="RRb-x7-j19" secondAttribute="centerX" id="ztd-TA-eAv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="RRb-x7-j19" firstAttribute="trailing" secondItem="rtb-Kg-541" secondAttribute="trailing" id="24x-VS-qP9"/>
+                                    <constraint firstItem="RRb-x7-j19" firstAttribute="height" secondItem="rtb-Kg-541" secondAttribute="height" multiplier="1.02128" priority="250" id="3A1-bY-Gsv"/>
                                     <constraint firstItem="RRb-x7-j19" firstAttribute="leading" secondItem="rtb-Kg-541" secondAttribute="leading" id="Grs-pR-TSl"/>
                                     <constraint firstAttribute="bottom" secondItem="RRb-x7-j19" secondAttribute="bottom" id="M0H-tH-wXW"/>
                                     <constraint firstItem="RRb-x7-j19" firstAttribute="top" secondItem="rtb-Kg-541" secondAttribute="top" id="uco-go-bwN"/>
@@ -519,6 +527,14 @@
                         <viewLayoutGuide key="safeArea" id="3sf-XJ-JhZ"/>
                     </view>
                     <size key="freeformSize" width="414" height="1300"/>
+                    <connections>
+                        <outlet property="chapterCharactersLbl" destination="C1j-d0-D9j" id="j8e-oh-C9P"/>
+                        <outlet property="chapterImg" destination="JBr-qK-FYa" id="SEo-MU-75F"/>
+                        <outlet property="chapterNumberLbl" destination="nDb-eG-2mJ" id="61Y-RX-HoT"/>
+                        <outlet property="chapterTitleLbl" destination="jCZ-qI-vYj" id="Yrd-GY-66e"/>
+                        <outlet property="explanation" destination="cdB-A4-HK0" id="ioF-rK-ESw"/>
+                        <outlet property="summary" destination="H53-KY-7Cu" id="0eX-ZE-EVD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z53-w6-gJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
