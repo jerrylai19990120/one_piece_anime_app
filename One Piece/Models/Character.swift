@@ -24,4 +24,8 @@ class Character {
         self.profileImg = imageUrl
     }
     
+    func setBounty(bounty: String){
+        self.bounty = bounty
+    }
+    
 }

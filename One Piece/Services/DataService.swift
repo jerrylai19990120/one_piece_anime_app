@@ -36,6 +36,23 @@ class DataService {
                 self.characters.append(item)
             }
             
+            let pathBounty = Bundle.main.path(forResource: "bounties", ofType: "json")
+            let urlBounty = URL(fileURLWithPath: pathBounty!)
+            let jsonBountyData = try? Data(contentsOf: urlBounty, options: .mappedIfSafe)
+            let jsonBounties = try? JSON(data: jsonBountyData!).array
+            
+            for bounty in jsonBounties! {
+                let name = bounty["name"].stringValue
+                let amount = bounty["bounty"].stringValue
+                
+                for ch in self.characters {
+                    if let range = ch.name!.range(of: name, options: .caseInsensitive) {
+                        ch.setBounty(bounty: "฿\(amount)")
+                    }
+                }
+                
+            }
+            
             completion(true)
         } catch {
             completion(false)
