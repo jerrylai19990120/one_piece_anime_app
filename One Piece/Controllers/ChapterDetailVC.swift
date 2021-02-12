@@ -11,7 +11,7 @@ import SDWebImage
 
 class ChapterDetailVC: UIViewController {
     
-    
+    @IBOutlet weak var navBarTitle: UILabel!
     @IBOutlet weak var chapterNumberLbl: UILabel!
     @IBOutlet weak var chapterTitleLbl: UILabel!
     @IBOutlet weak var chapterImg: UIImageView!
@@ -31,10 +31,9 @@ class ChapterDetailVC: UIViewController {
         chapterCharactersLbl.text = chapter?.chapterCharacters
         summary.text = chapter?.chapterSummary
         explanation.text = chapter?.chapterExplanation
-        
+        navBarTitle.text = chapter?.chapterNumber
         chapterImg.sd_setImage(with: URL(string: (chapter?.chapterImg)!), placeholderImage: UIImage(named: "anonymousIcon"))
         
-        // Do any additional setup after loading the view.
     }
     
 

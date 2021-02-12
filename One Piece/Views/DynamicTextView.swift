@@ -23,7 +23,6 @@ class DynamicTextView: UITextView {
     func setUpView(){
         self.sizeToFit()
         self.isScrollEnabled = false
-        self.translatesAutoresizingMaskIntoConstraints = true
     }
 
 }
