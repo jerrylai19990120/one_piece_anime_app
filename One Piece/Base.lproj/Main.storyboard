@@ -18,8 +18,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luffywano" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-vZ-qmP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CZb-Io-0EE">
+                                <rect key="frame" x="0.0" y="62" width="414" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="IGr-fm-Q10"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="59Q-2T-vQT">
-                                <rect key="frame" x="54" y="353.5" width="306" height="189"/>
+                                <rect key="frame" x="54" y="408" width="306" height="189"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EC-Fz-2bO" customClass="MenuButton" customModule="One_Piece" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="306" height="64"/>
@@ -58,9 +64,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="59Q-2T-vQT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6da-u4-42c"/>
                             <constraint firstItem="Baw-vZ-qmP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DXH-cG-j0z"/>
+                            <constraint firstItem="CZb-Io-0EE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="F9Z-Oa-Ts4"/>
+                            <constraint firstItem="CZb-Io-0EE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KX3-3w-OqS"/>
                             <constraint firstItem="59Q-2T-vQT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="QIp-9h-NOP"/>
+                            <constraint firstItem="59Q-2T-vQT" firstAttribute="top" secondItem="CZb-Io-0EE" secondAttribute="bottom" constant="143" id="WRT-17-Ele"/>
+                            <constraint firstItem="CZb-Io-0EE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jqM-ct-RuW"/>
                             <constraint firstItem="Baw-vZ-qmP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ksM-nh-6p4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="59Q-2T-vQT" secondAttribute="trailing" constant="54" id="qDw-o9-M9p"/>
                             <constraint firstItem="Baw-vZ-qmP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="woX-s8-j3q"/>
@@ -195,7 +204,7 @@
         <!--Character DetailVC-->
         <scene sceneID="aIb-GS-xVl">
             <objects>
-                <viewController id="zTu-SP-OKl" customClass="CharacterDetailVC" customModule="One_Piece" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="characterDetailVC" id="zTu-SP-OKl" customClass="CharacterDetailVC" customModule="One_Piece" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZeA-kl-mnm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +222,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkey D Luffy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6A-9y-793">
-                                        <rect key="frame" x="129.5" y="63" width="155" height="32.5"/>
+                                        <rect key="frame" x="18" y="63" width="378" height="32.5"/>
                                         <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -224,23 +233,117 @@
                                     <constraint firstAttribute="height" constant="125" id="03f-yE-CeS"/>
                                     <constraint firstItem="E9n-6H-teM" firstAttribute="centerY" secondItem="Y6A-9y-793" secondAttribute="centerY" id="30M-Lc-dIu"/>
                                     <constraint firstItem="Y6A-9y-793" firstAttribute="top" secondItem="NV9-6u-ga2" secondAttribute="top" constant="63" id="CGN-0F-DHM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y6A-9y-793" secondAttribute="trailing" constant="18" id="HXN-yg-pio"/>
                                     <constraint firstItem="Y6A-9y-793" firstAttribute="centerX" secondItem="NV9-6u-ga2" secondAttribute="centerX" id="Mp9-HU-Xaj"/>
                                     <constraint firstItem="E9n-6H-teM" firstAttribute="leading" secondItem="NV9-6u-ga2" secondAttribute="leading" constant="28" id="Ogo-Ec-yEW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lc6-8i-ue9">
+                                <rect key="frame" x="0.0" y="125" width="414" height="771"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luffy" translatesAutoresizingMaskIntoConstraints="NO" id="RC8-WY-ChB">
+                                        <rect key="frame" x="208" y="32" width="164" height="136"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="136" id="Rbr-At-bK9"/>
+                                            <constraint firstAttribute="width" constant="164" id="wqa-WM-zaM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="E04-x0-51W">
+                                        <rect key="frame" x="34" y="32" width="162" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkey D Luffy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-ms-6l4">
+                                                <rect key="frame" x="0.0" y="0.0" width="162" height="28"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                                <color key="textColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.74 Meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vg-9Z-Hd7">
+                                                <rect key="frame" x="0.0" y="56" width="162" height="28"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$500000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYc-98-scL">
+                                                <rect key="frame" x="0.0" y="112" width="162" height="28"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                                <color key="textColor" red="1" green="0.6630579164" blue="0.22586457469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="9Vg-9Z-Hd7" secondAttribute="trailing" id="6Xr-AY-g4u"/>
+                                            <constraint firstItem="f9a-ms-6l4" firstAttribute="leading" secondItem="E04-x0-51W" secondAttribute="leading" id="8YB-qa-EMH"/>
+                                            <constraint firstItem="jYc-98-scL" firstAttribute="leading" secondItem="E04-x0-51W" secondAttribute="leading" id="L51-o5-kmo"/>
+                                            <constraint firstAttribute="trailing" secondItem="jYc-98-scL" secondAttribute="trailing" id="MRS-Sb-IJf"/>
+                                            <constraint firstItem="9Vg-9Z-Hd7" firstAttribute="leading" secondItem="E04-x0-51W" secondAttribute="leading" id="htW-Ny-K8Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="f9a-ms-6l4" secondAttribute="trailing" id="tvr-04-BTh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Re5-TN-hWr">
+                                        <rect key="frame" x="34" y="211" width="346" height="542"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Za-Y0-dVp">
+                                                <rect key="frame" x="0.0" y="0.0" width="346" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdP-Jd-pn4" customClass="DynamicTextView" customModule="One_Piece" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="34.5" width="346" height="507.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Monkey D. Luffy is the protagonist in One Piece and captain of the increasingly infamous and powerful Straw Hat Pirates. He ate the Gum-Gum Devil Fruit that changed his body to rubber. His dream is to find the legendary One Piece and become Pirate King. He has made quite a name for himself around the world and has a bounty on his head to match - 1,500,000,000 Berries. Despite his naive attitude, he is an amazing leader who the Straw Hats follow with pride.</string>
+                                                <color key="textColor" red="0.26274509800000001" green="0.35686274509999999" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5Za-Y0-dVp" secondAttribute="trailing" id="12b-A2-CVT"/>
+                                            <constraint firstItem="5Za-Y0-dVp" firstAttribute="top" secondItem="Re5-TN-hWr" secondAttribute="top" id="1BK-9v-JO8"/>
+                                            <constraint firstItem="XdP-Jd-pn4" firstAttribute="leading" secondItem="Re5-TN-hWr" secondAttribute="leading" id="nEw-VJ-Bc8"/>
+                                            <constraint firstItem="5Za-Y0-dVp" firstAttribute="leading" secondItem="Re5-TN-hWr" secondAttribute="leading" id="pQ9-4E-frr"/>
+                                            <constraint firstAttribute="trailing" secondItem="XdP-Jd-pn4" secondAttribute="trailing" id="qJv-Df-Kg8"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.78634458814880825" green="0.91328352904695376" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Re5-TN-hWr" secondAttribute="bottom" constant="18" id="4ZY-GW-xPa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Re5-TN-hWr" secondAttribute="trailing" constant="34" id="BfA-o5-4hE"/>
+                                    <constraint firstItem="RC8-WY-ChB" firstAttribute="leading" secondItem="E04-x0-51W" secondAttribute="trailing" constant="12" id="Irt-cI-o9x"/>
+                                    <constraint firstItem="E04-x0-51W" firstAttribute="top" secondItem="lc6-8i-ue9" secondAttribute="top" constant="32" id="R61-h5-PFK"/>
+                                    <constraint firstItem="RC8-WY-ChB" firstAttribute="top" secondItem="lc6-8i-ue9" secondAttribute="top" constant="32" id="TLk-bN-EBA"/>
+                                    <constraint firstItem="Re5-TN-hWr" firstAttribute="leading" secondItem="lc6-8i-ue9" secondAttribute="leading" constant="34" id="XiZ-5W-HM4"/>
+                                    <constraint firstAttribute="trailing" secondItem="RC8-WY-ChB" secondAttribute="trailing" constant="42" id="oIw-FI-4NM"/>
+                                    <constraint firstItem="E04-x0-51W" firstAttribute="leading" secondItem="lc6-8i-ue9" secondAttribute="leading" constant="34" id="sP2-I8-gIf"/>
+                                    <constraint firstItem="Re5-TN-hWr" firstAttribute="top" secondItem="E04-x0-51W" secondAttribute="bottom" constant="39" id="zGc-71-ZHE"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lc6-8i-ue9" firstAttribute="leading" secondItem="Ltv-TE-aMF" secondAttribute="leading" id="A90-aU-ZwQ"/>
                             <constraint firstItem="NV9-6u-ga2" firstAttribute="leading" secondItem="Ltv-TE-aMF" secondAttribute="leading" id="HbN-sI-sMp"/>
                             <constraint firstItem="NV9-6u-ga2" firstAttribute="trailing" secondItem="Ltv-TE-aMF" secondAttribute="trailing" id="YEC-Xs-Edi"/>
+                            <constraint firstAttribute="bottom" secondItem="lc6-8i-ue9" secondAttribute="bottom" id="Zfr-7U-u47"/>
+                            <constraint firstItem="lc6-8i-ue9" firstAttribute="top" secondItem="NV9-6u-ga2" secondAttribute="bottom" id="cb4-5A-yCb"/>
+                            <constraint firstItem="lc6-8i-ue9" firstAttribute="trailing" secondItem="Ltv-TE-aMF" secondAttribute="trailing" id="deA-uZ-QWQ"/>
                             <constraint firstItem="NV9-6u-ga2" firstAttribute="top" secondItem="ZeA-kl-mnm" secondAttribute="top" id="xQb-a6-p1u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ltv-TE-aMF"/>
                     </view>
+                    <connections>
+                        <outlet property="characterBounty" destination="jYc-98-scL" id="Yrx-Kv-9mC"/>
+                        <outlet property="characterHeight" destination="9Vg-9Z-Hd7" id="OtI-u1-3lY"/>
+                        <outlet property="characterImg" destination="RC8-WY-ChB" id="5PS-kQ-ggQ"/>
+                        <outlet property="characterName" destination="f9a-ms-6l4" id="f8X-1g-c8H"/>
+                        <outlet property="descriptionField" destination="XdP-Jd-pn4" id="BoN-Ja-AK9"/>
+                        <outlet property="navBarName" destination="Y6A-9y-793" id="qsg-ej-AiA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54y-Ud-mGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1712" y="129"/>
+            <point key="canvasLocation" x="1711.5942028985507" y="128.57142857142856"/>
         </scene>
         <!--ChaptersVC-->
         <scene sceneID="7bj-tQ-hbe">
@@ -397,7 +500,7 @@
                                 <rect key="frame" x="0.0" y="125" width="414" height="771"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRb-x7-j19" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1397"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1527"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DFP-S6-lkZ">
                                                 <rect key="frame" x="12" y="371.5" width="390" height="74.5"/>
@@ -518,7 +621,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.32382379179999998" green="0.82271794730000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RRb-x7-j19" firstAttribute="height" secondItem="ght-Qe-Ax3" secondAttribute="height" multiplier="0.922991" constant="570" id="PtD-Pw-2tI"/>
+                            <constraint firstItem="RRb-x7-j19" firstAttribute="height" secondItem="ght-Qe-Ax3" secondAttribute="height" multiplier="0.922991" constant="700" id="PtD-Pw-2tI"/>
                             <constraint firstItem="rtb-Kg-541" firstAttribute="top" secondItem="qJR-DF-Rbs" secondAttribute="bottom" id="RzC-Cw-I6d"/>
                             <constraint firstItem="rtb-Kg-541" firstAttribute="trailing" secondItem="3sf-XJ-JhZ" secondAttribute="trailing" id="XDo-LT-A8Z"/>
                             <constraint firstItem="qJR-DF-Rbs" firstAttribute="top" secondItem="ght-Qe-Ax3" secondAttribute="top" id="fOd-ZS-42e"/>
@@ -548,6 +651,7 @@
     <resources>
         <image name="anonymousIcon" width="389" height="129"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="logo" width="1748" height="1313"/>
         <image name="luffy" width="233" height="216"/>
         <image name="luffywano" width="1078" height="1607"/>
     </resources>

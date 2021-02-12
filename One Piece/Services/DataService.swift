@@ -20,6 +20,8 @@ class DataService {
     
     var selectedChapter: Int?
     
+    var selectedCharacter: Int?
+    
     func getCharacters(completion: @escaping (_ status:Bool)->()){
        
         do {
@@ -73,6 +75,23 @@ class DataService {
                 }
             }
             
+            let pathSummary = Bundle.main.path(forResource: "summary", ofType: "json")
+            let urlSummary = URL(fileURLWithPath: pathSummary!)
+            let jsonSummaryData = try? Data(contentsOf: urlSummary, options: .mappedIfSafe)
+            let jsonSummary = try? JSON(data: jsonSummaryData!).array
+            
+            for summary in jsonSummary! {
+                let name = summary["name"].stringValue
+                let description = summary["summary"].stringValue
+                
+                for ch in self.characters {
+                    if let range = ch.name?.range(of: name, options: .caseInsensitive) {
+                        ch.setSummary(desc: description)
+                        break
+                    }
+                }
+            }
+            
             completion(true)
         } catch {
             completion(false)
@@ -82,7 +101,7 @@ class DataService {
     
     func getChapters(completion: @escaping (_ status: Bool)->()){
         
-        for i in 1...10 {
+        for i in 1...985 {
             AF.request("https://onepiececover.com/api/chapters/\(i)").responseJSON { (response) in
                 
                 guard let json = try? JSON(data: response.data!) else {
@@ -101,7 +120,7 @@ class DataService {
                 
                 self.chapters.append(chapter)
                 
-                if self.chapters.count == 10 {
+                if self.chapters.count == 983 {
                     self.chapters.sort {
                         $0.chapterId! < $1.chapterId!
                     }
@@ -114,10 +133,6 @@ class DataService {
     }
     
     
-    func getCharacterDetails(){
-        
-    }
-    
     func removeChapters(){
         chapters.removeAll()
     }
@@ -128,6 +143,10 @@ class DataService {
     
     func selectChapter(number: Int){
         self.selectedChapter = number
+    }
+    
+    func selectCharacter(number: Int){
+        self.selectedCharacter = number
     }
     
 }

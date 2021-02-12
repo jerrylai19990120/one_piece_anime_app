@@ -16,6 +16,7 @@ class Character {
     var height: String?
     var bounty: String?
     var profileImg: String?
+    var summary = "No description yet..."
     
     init(imageUrl: String, name: String, height: String, bounty: String) {
         self.name = name
@@ -30,6 +31,10 @@ class Character {
     
     func setHeight(height: String){
         self.height = height
+    }
+    
+    func setSummary(desc: String){
+        self.summary = desc
     }
     
 }

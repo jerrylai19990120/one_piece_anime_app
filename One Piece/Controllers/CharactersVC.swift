@@ -61,5 +61,13 @@ extension CharactersVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DataService.instance.selectCharacter(number: indexPath.row)
+        guard let characterDetailVC = storyboard?.instantiateViewController(withIdentifier: "characterDetailVC") as? CharacterDetailVC else {return}
+        characterDetailVC.modalPresentationStyle = .fullScreen
+        present(characterDetailVC, animated: true, completion: nil)
+        
+    }
+    
     
 }
